@@ -9,44 +9,116 @@ aggrStrata_RcppOpen <- function(strata, nvar, vett, censiti, dominio) {
     .Call(`_SamplingStrata_aggrStrata_RcppOpen`, strata, nvar, vett, censiti, dominio)
 }
 
-select_variables <- function(dati, prefix, nvar) {
-    .Call(`_SamplingStrata_select_variables`, dati, prefix, nvar)
+uppercasevec <- function(df) {
+    .Call(`_SamplingStrata_uppercasevec`, df)
 }
 
-disjoint <- function(dom) {
-    .Call(`_SamplingStrata_disjoint`, dom)
+grepRcpp <- function(pattern, x) {
+    .Call(`_SamplingStrata_grepRcpp`, pattern, x)
 }
 
-m_s <- function(disj, mat) {
-    .Call(`_SamplingStrata_m_s`, disj, mat)
+seqRcpp <- function(vx) {
+    .Call(`_SamplingStrata_seqRcpp`, vx)
 }
 
-rowSums_Rcpp <- function(x) {
-    .Call(`_SamplingStrata_rowSums_Rcpp`, x)
+int_to_string <- function(addr) {
+    .Call(`_SamplingStrata_int_to_string`, addr)
 }
 
-colSums_Rcpp <- function(x) {
-    .Call(`_SamplingStrata_colSums_Rcpp`, x)
+paste3 <- function(lhs, rhs) {
+    .Call(`_SamplingStrata_paste3`, lhs, rhs)
 }
 
-cv_Rcpp <- function(errors, ndom, nvar) {
-    .Call(`_SamplingStrata_cv_Rcpp`, errors, ndom, nvar)
+repRcpp <- function(x, times) {
+    .Call(`_SamplingStrata_repRcpp`, x, times)
 }
 
-crea_a <- function(m, s, nocens, N, cv, epsilon) {
-    .Call(`_SamplingStrata_crea_a`, m, s, nocens, N, cv, epsilon)
+repRcpp2 <- function(x, n) {
+    .Call(`_SamplingStrata_repRcpp2`, x, n)
 }
 
-chromy_Rcpp <- function(a, alfatot, diff, iter, alfa, alfanext, x, cost, nvar, realAllocation) {
-    .Call(`_SamplingStrata_chromy_Rcpp`, a, alfatot, diff, iter, alfa, alfanext, x, cost, nvar, realAllocation)
+repRcppdouble <- function(x, n) {
+    .Call(`_SamplingStrata_repRcppdouble`, x, n)
 }
 
-check_n <- function(n, N, minnumstrat) {
-    .Call(`_SamplingStrata_check_n`, n, N, minnumstrat)
+testDFtoNM1 <- function(x) {
+    .Call(`_SamplingStrata_testDFtoNM1`, x)
 }
 
-bethel_Rcpp <- function(strata, errors, minnumstrat, realAllocation = 1L) {
-    .Call(`_SamplingStrata_bethel_Rcpp`, strata, errors, minnumstrat, realAllocation)
+ordina_variabiliRcpp <- function(dati, prefisso, n_var) {
+    .Call(`_SamplingStrata_ordina_variabiliRcpp`, dati, prefisso, n_var)
+}
+
+ndomRcpp <- function(prefisso, n_vars) {
+    .Call(`_SamplingStrata_ndomRcpp`, prefisso, n_vars)
+}
+
+nvaluesRcpp <- function(nom_dom, dom) {
+    .Call(`_SamplingStrata_nvaluesRcpp`, nom_dom, dom)
+}
+
+crea_disjRcpp <- function(data, pref) {
+    .Call(`_SamplingStrata_crea_disjRcpp`, data, pref)
+}
+
+dfrow <- function(x, num) {
+    .Call(`_SamplingStrata_dfrow`, x, num)
+}
+
+int_to_charvec <- function(addr) {
+    .Call(`_SamplingStrata_int_to_charvec`, addr)
+}
+
+paste4 <- function(lhs, rhs) {
+    .Call(`_SamplingStrata_paste4`, lhs, rhs)
+}
+
+testDFtoNM3 <- function(x) {
+    .Call(`_SamplingStrata_testDFtoNM3`, x)
+}
+
+ordina_variabiliRcpp2 <- function(dati, prefisso, n_var) {
+    .Call(`_SamplingStrata_ordina_variabiliRcpp2`, dati, prefisso, n_var)
+}
+
+cbindRcpp <- function(a, b) {
+    .Call(`_SamplingStrata_cbindRcpp`, a, b)
+}
+
+cbindRcpp1 <- function(a, b) {
+    .Call(`_SamplingStrata_cbindRcpp1`, a, b)
+}
+
+vecconcat <- function(x, y) {
+    .Call(`_SamplingStrata_vecconcat`, x, y)
+}
+
+stringrepRcpp <- function(x, y) {
+    .Call(`_SamplingStrata_stringrepRcpp`, x, y)
+}
+
+concat <- function(x, y) {
+    .Call(`_SamplingStrata_concat`, x, y)
+}
+
+stringrepRcpp2 <- function(x, y) {
+    .Call(`_SamplingStrata_stringrepRcpp2`, x, y)
+}
+
+crea_aRcpp <- function(N11, s11, nocens11, m11, cv11, epsilon = 1e-11) {
+    .Call(`_SamplingStrata_crea_aRcpp`, N11, s11, nocens11, m11, cv11, epsilon)
+}
+
+a13 <- function(x) {
+    .Call(`_SamplingStrata_a13`, x)
+}
+
+chromyNew1 <- function(alfatot, diff, iter, alfa, alfanext, x, a, cost, epsilon = 1e-11, maxiter = 200L, realAllocation = TRUE) {
+    .Call(`_SamplingStrata_chromyNew1`, alfatot, diff, iter, alfa, alfanext, x, a, cost, epsilon, maxiter, realAllocation)
+}
+
+bethelRcppOpen <- function(stratif, errors, minnumstrat = 2L, maxiter = 200L, maxiter1 = 25L, printa = TRUE, realAllocation = TRUE, epsilon = 1e-11) {
+    .Call(`_SamplingStrata_bethelRcppOpen`, stratif, errors, minnumstrat, maxiter, maxiter1, printa, realAllocation, epsilon)
 }
 
 stdev_Rcpp <- function(dataset, i, fitting, range, kappa) {

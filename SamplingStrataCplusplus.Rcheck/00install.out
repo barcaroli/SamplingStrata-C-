@@ -1,0 +1,20 @@
+* installing *source* package 'SamplingStrata' ...
+** using staged installation
+** libs
+make: Nothing to be done for 'all'.
+make: 'symbols.rds' is up to date.
+installing to D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck/00LOCK-SamplingStrataCplusplus/00new/SamplingStrata/libs/x64
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Avvertimento in file.rename(instdir, final_instdir):
+  non è possibile rinominare il file 'D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck/00LOCK-SamplingStrataCplusplus/00new/SamplingStrata' in 'D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck/SamplingStrata', motivo 'Accesso negato'
+ERROR:    moving to final location failed
+* removing 'D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck/SamplingStrata'

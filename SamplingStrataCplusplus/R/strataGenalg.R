@@ -95,7 +95,7 @@ strataGenalg <- function(errors, strata, cens, strcens,
         # --------------------------------------------------------------------------
         # Chiamata funzione allocazione multivariata if (dimens <
         # initialStrata)
-        soluz <- bethel_Rcpp(strcor, errors, minnumstr, 
+        soluz <- bethelRcppOpen(strcor, errors, minnumstr, 
                         realAllocation = realAllocation)
 		if (writeFiles == TRUE) {
 			sink()
@@ -183,13 +183,13 @@ strataGenalg <- function(errors, strata, cens, strcens,
 # Here the change to take into account the censused strata
     if (strcens == TRUE) {
       stratatot <- rbind(strcor,cens)
-      allstrata <- bethel_Rcpp(stratatot,errors,minnumstr,
+      allstrata <- bethelRcppOpen(stratatot,errors,minnumstr,
                           realAllocation = realAllocation)
       #  soluz <- as.numeric(attributes(allstrata)$confr[1:nrow(strcor),3])
       soluz <- allstrata[1:nrow(strcor)]
     }
     if (strcens == FALSE) {
-      soluz <- bethel_Rcpp(strcor, errors, minnumstr, 
+      soluz <- bethelRcppOpen(strcor, errors, minnumstr, 
                       realAllocation = realAllocation)
     }
 #-----------------------------------------------------  

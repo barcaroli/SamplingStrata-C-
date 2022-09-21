@@ -15,7 +15,7 @@ prepareSuggestion <- function(kmean=kmean,
   frame1 <- merge(frame1,kmean[,c("id","suggestions")],by=c("id"))
   frame1$X1 <- frame1$suggestions
   strataKm <- buildStrataDF(frame1,progress=FALSE)
-  # strataKm$SOLUZ <- bethel(strataKm,cv[1,])
+  # strataKm$SOLUZ <- bethelRcppOpen(strataKm,cv[1,])
   strataKm$SOLUZ <- 1
   framenew <- frame
   framenew <- merge(framenew,kmean[,c("id","suggestions")],by=c("id"))

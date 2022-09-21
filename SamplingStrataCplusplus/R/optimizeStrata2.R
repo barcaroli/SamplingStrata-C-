@@ -195,7 +195,7 @@ optimizeStrata2 <-
                                                   colnames(stcamp[[i]])))])
                                     error <- data.frame(erro[[i]],stringsAsFactors = TRUE)
                                     strat <- data.frame(solut[[2]],stringsAsFactors = TRUE)
-                                    solut[[2]]$SOLUZ <- sum(bethel(strat, error, 
+                                    solut[[2]]$SOLUZ <- sum(bethelRcppOpen(strat, error, 
                                                                    realAllocation = T))
                                     if (solut[[2]]$SOLUZ > solut[[2]]$N) 
                                       solut[[2]]$SOLUZ <- solut[[2]]$N
@@ -293,7 +293,7 @@ optimizeStrata2 <-
                                                        colnames(stcamp[[i]])))])
               error <- data.frame(erro[[i]],stringsAsFactors = TRUE)
               strat <- data.frame(solut[[2]],stringsAsFactors = TRUE)
-              solut[[2]]$SOLUZ <- sum(bethel(strat, error, 
+              solut[[2]]$SOLUZ <- sum(bethelRcppOpen(strat, error, 
                                              realAllocation = T))
               if (solut[[2]]$SOLUZ > solut[[2]]$N) 
                 solut[[2]]$SOLUZ <- solut[[2]]$N

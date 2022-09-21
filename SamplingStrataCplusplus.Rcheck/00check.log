@@ -1,0 +1,38 @@
+* using log directory 'D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck'
+* using R version 4.2.1 Patched (2022-06-30 r82541 ucrt)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: UTF-8
+* checking for file 'SamplingStrataCplusplus/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'SamplingStrata' version '1.5-4'
+* checking package namespace information ... OK
+* checking package dependencies ... NOTE
+Depends: includes the non-default packages:
+  'memoise', 'doParallel', 'pbapply', 'formattable', 'SamplingBigData',
+  'glue', 'Rcpp', 'RcppParallel', 'RcppArmadillo'
+Adding so many packages to the search path is excessive and importing
+selectively is preferable.
+* checking if this is a source package ... WARNING
+Subdirectory 'SamplingStrata/src' contains apparent object files/libraries
+  D:/Google
+  Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus/src/SamplingStrata.dll
+  D:/Google
+  Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus/src/aggrStrata_RcppOpen.o
+  D:/Google
+  Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus/src/bethelRcppOpen2.o
+  D:/Google
+  Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus/src/stdev_Rcpp.o
+Object files/libraries should not be included in a source package.
+* checking if there is a namespace ... OK
+* checking for executable files ... WARNING
+Found the following executable file:
+  src/SamplingStrata.dll
+Source packages should not contain undeclared executable files.
+See section 'Package structure' in the 'Writing R Extensions' manual.
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'SamplingStrata' can be installed ... ERROR
+Installation failed.
+See 'D:/Google Drive/Sampling/SamplingStrata-C-/SamplingStrataCplusplus.Rcheck/00install.out' for details.
+* DONE
+Status: 1 ERROR, 2 WARNINGs, 1 NOTE

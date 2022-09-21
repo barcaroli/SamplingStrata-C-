@@ -1,2 +1,2 @@
-R CMD check SamplingStrata
-R CMD build SamplingStrata (Rcmd build)
+R CMD check SamplingStrataCplusplus
+R CMD build SamplingStrataCplusplus (Rcmd build)

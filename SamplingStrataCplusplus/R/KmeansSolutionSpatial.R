@@ -34,7 +34,7 @@ KmeansSolutionSpatial <- function (frame,
                               kappa = kappa, 
                               vett = rep(1, nrow(frame[frame$domainvalue == k,])), 
                               dominio = k)
-    v <- bethel(aggr, errorscorr, minnumstrat = minnumstrat)
+    v <- bethelRcppOpen(aggr, errorscorr, minnumstrat = minnumstrat)
     sum(v)
     best[k] <- sum(v)
     if (is.na(maxclusters)) {
@@ -71,7 +71,7 @@ KmeansSolutionSpatial <- function (frame,
                                 kappa = kappa,
                                 vett = solution[frame$domainvalue == k], 
                                 dominio = k)
-      v <- bethel(aggr, errorscorr, minnumstrat = minnumstrat)
+      v <- bethelRcppOpen(aggr, errorscorr, minnumstrat = minnumstrat)
       if (showPlot == TRUE) 
         points(i, sum(v))
       if (sum(v) <= best[k]) {

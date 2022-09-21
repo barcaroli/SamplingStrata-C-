@@ -63,13 +63,13 @@ evaluate <- function(dataset,
   strata <- buildStrataDF(frame,model=model,progress = FALSE,verbose=FALSE)
   if (strcens == TRUE) {
     stratatot <- rbind(strata,cens)
-    soluz <- bethel(stratatot, 
+    soluz <- bethelRcppOpen(stratatot, 
                     errors, 
                     minnumstr,
                     realAllocation = realAllocation)
   }
   if (strcens == FALSE) {
-    soluz <- bethel(strata, 
+    soluz <- bethelRcppOpen(strata, 
                     errors, 
                     minnumstr,
                     realAllocation = realAllocation)
@@ -151,7 +151,7 @@ frame$X1 <- as.numeric(frame$X1)
 strata <- buildStrataDF(frame,model=model,progress = FALSE,verbose=FALSE)
 if (strcens == TRUE) {
   stratatot <- rbind(strata,cens)
-  soluz <- bethel(stratatot, 
+  soluz <- bethelRcppOpen(stratatot, 
                   errors, 
                   minnumstr, 
                   realAllocation = realAllocation)
@@ -159,7 +159,7 @@ if (strcens == TRUE) {
   colnames(risulta)[ncol(risulta)] <- "SOLUZ"
 }
 if (strcens == FALSE) {
-  soluz <- bethel(strata, 
+  soluz <- bethelRcppOpen(strata, 
                   errors, 
                   minnumstr,
                   realAllocation = realAllocation)

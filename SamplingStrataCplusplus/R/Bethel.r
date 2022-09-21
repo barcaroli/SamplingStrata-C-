@@ -1,18 +1,18 @@
 #
 # ----------------------------------------------------------------------
-# Function bethel definition Multivariate optimal
+# Function bethelRcppOpen definition Multivariate optimal
 # allocation for different domains of interest in
 # stratified sample design
 # 
-# Extension of bethel methodology with Chromy Algorithm see
-# bethel(1989)'Sample Allocation in Multivarate Surveys' -
+# Extension of bethelRcppOpen methodology with Chromy Algorithm see
+# bethelRcppOpen(1989)'Sample Allocation in Multivarate Surveys' -
 # Survey Methodology Author: Daniela Pagliuca
 # <pagliuca@istat.it> with contributions of M. Teresa
 # Buglielli <bugliell@istat.it> and Giulio Barcaroli
 # <barcarol@istat.it>
 # 
 # ----------------------------------------------------------------------
-bethel <- function(stratif, errors, minnumstrat = 2, maxiter = 200, 
+bethelRcppOpen <- function(stratif, errors, minnumstrat = 2, maxiter = 200, 
     maxiter1 = 25, printa = FALSE, realAllocation = FALSE, epsilon = 1e-11) # Begin body
 {
     # First input data frame
@@ -257,7 +257,7 @@ bethel <- function(stratif, errors, minnumstrat = 2, maxiter = 200,
             # ---------------------
             
             stampa_confronto <- function(n, N, strato) {
-                nomi <- c("STRATUM", "POPULATION", "bethel", 
+                nomi <- c("STRATUM", "POPULATION", "bethelRcppOpen", 
                   "PROPORTIONAL", "EQUAL")
                 df <- NULL
                 df <- cbind(df, as.character(strato), N, n, ceiling(sum(n) * 

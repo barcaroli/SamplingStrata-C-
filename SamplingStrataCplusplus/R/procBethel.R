@@ -1,9 +1,9 @@
 #-------------------------------------------------------
 # Function to optimize allocation and to select a sample
-# with a direct bethel multivariate allocation
+# with a direct bethelRcppOpen multivariate allocation
 # (without application of genetic algorithm)
 #-------------------------------------------------------
-procBethel <- function(framesamp,
+procbethelRcppOpen <- function(framesamp,
                         framecens,
                         errors,
                         sampling_method=c("srs","systematic","spatial"),
@@ -54,12 +54,12 @@ procBethel <- function(framesamp,
     framecens$WEIGHTS <- 1
     # framecens$FPC <- 1
   }
-  # bethel multivariate allocation----------------------------------------
+  # bethelRcppOpen multivariate allocation----------------------------------------
   strata <- strata[order(strata$STRATO),]
   framesamp <- framesamp[order(framesamp$STRATO),]
   newstratatot <- NULL
   for (j in (1:length(unique(strata$DOM1)))) {
-    SOLUZ <- as.numeric(bethel(strata[strata$DOM1==j,],errors[j,],minnumstrat=minnumstrat))
+    SOLUZ <- as.numeric(bethelRcppOpen(strata[strata$DOM1==j,],errors[j,],minnumstrat=minnumstrat))
     newstrata <- cbind(strata[strata$DOM1==j,],SOLUZ)
     newstratatot <- rbind(newstratatot,newstrata)
   }

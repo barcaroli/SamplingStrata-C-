@@ -110,7 +110,7 @@ optimizeStrata <-
                                                                              colnames(stcamp[[i]])))])
                                     error <- data.frame(erro[[i]],stringsAsFactors = TRUE)
                                     strat <- data.frame(solut[[2]],stringsAsFactors = TRUE)
-                                    solut[[2]]$SOLUZ <- sum(bethel_Rcpp(strat, error, 
+                                    solut[[2]]$SOLUZ <- sum(bethelRcppOpen(strat, error, 
                                                                    realAllocation = T))
                                     if (solut[[2]]$SOLUZ > solut[[2]]$N) 
                                       solut[[2]]$SOLUZ <- solut[[2]]$N
@@ -195,7 +195,7 @@ optimizeStrata <-
                                                        colnames(stcamp[[i]])))])
               error <- data.frame(erro[[i]],stringsAsFactors = TRUE)
               strat <- data.frame(solut[[2]],stringsAsFactors = TRUE)
-              solut[[2]]$SOLUZ <- sum(bethel_Rcpp(strat, error, 
+              solut[[2]]$SOLUZ <- sum(bethelRcppOpen(strat, error, 
                                              realAllocation = T))
               if (solut[[2]]$SOLUZ > solut[[2]]$N) 
                 solut[[2]]$SOLUZ <- solut[[2]]$N
@@ -277,7 +277,7 @@ optimizeStrata <-
     }
     outstrata <- as.data.frame(outstrata)
     colnames(outstrata) <- toupper(colnames(outstrata))
-    dimens <- sum(round(outstrata$SOLUZ))
+    dimens <- sum(round(as.numeric(outstrata$SOLUZ)))
     cat("\n *** Sample size : ", dimens)
     cat("\n *** Number of strata : ", nrow(outstrata))
     cat("\n---------------------------")

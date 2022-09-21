@@ -25,7 +25,7 @@ KmeansSolution <- function(strata,
                          censiti=0,
                          vett=rep(1,nrow(stratacorr)),
                          dominio=k)
-      v <- bethel(aggr, errorscorr, minnumstrat = minnumstrat)
+      v <- bethelRcppOpen(aggr, errorscorr, minnumstrat = minnumstrat)
       sum(v)
       best[k] <- sum(v)
       if (is.na(maxclusters)) {
@@ -52,7 +52,7 @@ KmeansSolution <- function(strata,
                            censiti=0,
                            vett=solution,
                            dominio=k)
-        v <- bethel(aggr, errorscorr, minnumstrat = minnumstrat)
+        v <- bethelRcppOpen(aggr, errorscorr, minnumstrat = minnumstrat)
         # cat("\n",sum(v))
         if (showPlot == TRUE) points(i,sum(v))
         if (sum(v) <= best[k]) {
