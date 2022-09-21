@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // Rcpp_sortDelta
 IntegerVector Rcpp_sortDelta(IntegerVector x);
-RcppExport SEXP _SamplingStrata_Rcpp_sortDelta(SEXP xSEXP) {
+RcppExport SEXP _SamplingStrataC_Rcpp_sortDelta(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -24,7 +24,7 @@ END_RCPP
 }
 // aggrStrata_RcppOpen
 NumericMatrix aggrStrata_RcppOpen(DataFrame strata, int nvar, IntegerVector vett, int censiti, int dominio);
-RcppExport SEXP _SamplingStrata_aggrStrata_RcppOpen(SEXP strataSEXP, SEXP nvarSEXP, SEXP vettSEXP, SEXP censitiSEXP, SEXP dominioSEXP) {
+RcppExport SEXP _SamplingStrataC_aggrStrata_RcppOpen(SEXP strataSEXP, SEXP nvarSEXP, SEXP vettSEXP, SEXP censitiSEXP, SEXP dominioSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -39,7 +39,7 @@ END_RCPP
 }
 // uppercasevec
 CharacterVector uppercasevec(DataFrame df);
-RcppExport SEXP _SamplingStrata_uppercasevec(SEXP dfSEXP) {
+RcppExport SEXP _SamplingStrataC_uppercasevec(SEXP dfSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -50,7 +50,7 @@ END_RCPP
 }
 // grepRcpp
 int grepRcpp(const std::string& pattern, StringVector& x);
-RcppExport SEXP _SamplingStrata_grepRcpp(SEXP patternSEXP, SEXP xSEXP) {
+RcppExport SEXP _SamplingStrataC_grepRcpp(SEXP patternSEXP, SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -62,7 +62,7 @@ END_RCPP
 }
 // seqRcpp
 Rcpp::IntegerVector seqRcpp(int vx);
-RcppExport SEXP _SamplingStrata_seqRcpp(SEXP vxSEXP) {
+RcppExport SEXP _SamplingStrataC_seqRcpp(SEXP vxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -73,7 +73,7 @@ END_RCPP
 }
 // int_to_string
 std::string int_to_string(int& addr);
-RcppExport SEXP _SamplingStrata_int_to_string(SEXP addrSEXP) {
+RcppExport SEXP _SamplingStrataC_int_to_string(SEXP addrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -84,7 +84,7 @@ END_RCPP
 }
 // paste3
 CharacterVector paste3(CharacterVector lhs, CharacterVector rhs);
-RcppExport SEXP _SamplingStrata_paste3(SEXP lhsSEXP, SEXP rhsSEXP) {
+RcppExport SEXP _SamplingStrataC_paste3(SEXP lhsSEXP, SEXP rhsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -96,7 +96,7 @@ END_RCPP
 }
 // repRcpp
 NumericVector repRcpp(NumericVector x, IntegerVector times);
-RcppExport SEXP _SamplingStrata_repRcpp(SEXP xSEXP, SEXP timesSEXP) {
+RcppExport SEXP _SamplingStrataC_repRcpp(SEXP xSEXP, SEXP timesSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -108,7 +108,7 @@ END_RCPP
 }
 // repRcpp2
 NumericVector repRcpp2(int x, int n);
-RcppExport SEXP _SamplingStrata_repRcpp2(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _SamplingStrataC_repRcpp2(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -120,7 +120,7 @@ END_RCPP
 }
 // repRcppdouble
 NumericVector repRcppdouble(double x, int n);
-RcppExport SEXP _SamplingStrata_repRcppdouble(SEXP xSEXP, SEXP nSEXP) {
+RcppExport SEXP _SamplingStrataC_repRcppdouble(SEXP xSEXP, SEXP nSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -132,7 +132,7 @@ END_RCPP
 }
 // testDFtoNM1
 NumericMatrix testDFtoNM1(DataFrame x);
-RcppExport SEXP _SamplingStrata_testDFtoNM1(SEXP xSEXP) {
+RcppExport SEXP _SamplingStrataC_testDFtoNM1(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -143,7 +143,7 @@ END_RCPP
 }
 // ordina_variabiliRcpp
 NumericMatrix ordina_variabiliRcpp(DataFrame& dati, CharacterVector prefisso, int& n_var);
-RcppExport SEXP _SamplingStrata_ordina_variabiliRcpp(SEXP datiSEXP, SEXP prefissoSEXP, SEXP n_varSEXP) {
+RcppExport SEXP _SamplingStrataC_ordina_variabiliRcpp(SEXP datiSEXP, SEXP prefissoSEXP, SEXP n_varSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -156,7 +156,7 @@ END_RCPP
 }
 // ndomRcpp
 StringVector ndomRcpp(CharacterVector prefisso, int n_vars);
-RcppExport SEXP _SamplingStrata_ndomRcpp(SEXP prefissoSEXP, SEXP n_varsSEXP) {
+RcppExport SEXP _SamplingStrataC_ndomRcpp(SEXP prefissoSEXP, SEXP n_varsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -168,7 +168,7 @@ END_RCPP
 }
 // nvaluesRcpp
 IntegerVector nvaluesRcpp(StringVector nom_dom, NumericMatrix dom);
-RcppExport SEXP _SamplingStrata_nvaluesRcpp(SEXP nom_domSEXP, SEXP domSEXP) {
+RcppExport SEXP _SamplingStrataC_nvaluesRcpp(SEXP nom_domSEXP, SEXP domSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -180,7 +180,7 @@ END_RCPP
 }
 // crea_disjRcpp
 arma::mat crea_disjRcpp(DataFrame data, CharacterVector pref);
-RcppExport SEXP _SamplingStrata_crea_disjRcpp(SEXP dataSEXP, SEXP prefSEXP) {
+RcppExport SEXP _SamplingStrataC_crea_disjRcpp(SEXP dataSEXP, SEXP prefSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -192,7 +192,7 @@ END_RCPP
 }
 // dfrow
 CharacterVector dfrow(DataFrame& x, int num);
-RcppExport SEXP _SamplingStrata_dfrow(SEXP xSEXP, SEXP numSEXP) {
+RcppExport SEXP _SamplingStrataC_dfrow(SEXP xSEXP, SEXP numSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -204,7 +204,7 @@ END_RCPP
 }
 // int_to_charvec
 CharacterVector int_to_charvec(int addr);
-RcppExport SEXP _SamplingStrata_int_to_charvec(SEXP addrSEXP) {
+RcppExport SEXP _SamplingStrataC_int_to_charvec(SEXP addrSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -215,7 +215,7 @@ END_RCPP
 }
 // paste4
 std::string paste4(CharacterVector lhs, CharacterVector rhs);
-RcppExport SEXP _SamplingStrata_paste4(SEXP lhsSEXP, SEXP rhsSEXP) {
+RcppExport SEXP _SamplingStrataC_paste4(SEXP lhsSEXP, SEXP rhsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -227,7 +227,7 @@ END_RCPP
 }
 // testDFtoNM3
 NumericMatrix testDFtoNM3(DataFrame x);
-RcppExport SEXP _SamplingStrata_testDFtoNM3(SEXP xSEXP) {
+RcppExport SEXP _SamplingStrataC_testDFtoNM3(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -238,7 +238,7 @@ END_RCPP
 }
 // ordina_variabiliRcpp2
 NumericMatrix ordina_variabiliRcpp2(DataFrame dati, CharacterVector prefisso, int n_var);
-RcppExport SEXP _SamplingStrata_ordina_variabiliRcpp2(SEXP datiSEXP, SEXP prefissoSEXP, SEXP n_varSEXP) {
+RcppExport SEXP _SamplingStrataC_ordina_variabiliRcpp2(SEXP datiSEXP, SEXP prefissoSEXP, SEXP n_varSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -251,7 +251,7 @@ END_RCPP
 }
 // cbindRcpp
 arma::mat cbindRcpp(arma::mat a, arma::mat b);
-RcppExport SEXP _SamplingStrata_cbindRcpp(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _SamplingStrataC_cbindRcpp(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -263,7 +263,7 @@ END_RCPP
 }
 // cbindRcpp1
 NumericMatrix cbindRcpp1(NumericMatrix a, NumericMatrix b);
-RcppExport SEXP _SamplingStrata_cbindRcpp1(SEXP aSEXP, SEXP bSEXP) {
+RcppExport SEXP _SamplingStrataC_cbindRcpp1(SEXP aSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -275,7 +275,7 @@ END_RCPP
 }
 // vecconcat
 arma::rowvec vecconcat(arma::rowvec x, arma::rowvec y);
-RcppExport SEXP _SamplingStrata_vecconcat(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP _SamplingStrataC_vecconcat(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -287,7 +287,7 @@ END_RCPP
 }
 // stringrepRcpp
 CharacterVector stringrepRcpp(StringVector x, int y);
-RcppExport SEXP _SamplingStrata_stringrepRcpp(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP _SamplingStrataC_stringrepRcpp(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -299,7 +299,7 @@ END_RCPP
 }
 // concat
 std::vector<std::string> concat(std::vector<std::string> x, std::vector<std::string> y);
-RcppExport SEXP _SamplingStrata_concat(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP _SamplingStrataC_concat(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -311,7 +311,7 @@ END_RCPP
 }
 // stringrepRcpp2
 std::vector<std::string> stringrepRcpp2(StringVector x, int y);
-RcppExport SEXP _SamplingStrata_stringrepRcpp2(SEXP xSEXP, SEXP ySEXP) {
+RcppExport SEXP _SamplingStrataC_stringrepRcpp2(SEXP xSEXP, SEXP ySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -323,7 +323,7 @@ END_RCPP
 }
 // crea_aRcpp
 arma::mat crea_aRcpp(arma::vec N11, arma::mat s11, arma::vec nocens11, arma::mat m11, arma::vec cv11, double epsilon);
-RcppExport SEXP _SamplingStrata_crea_aRcpp(SEXP N11SEXP, SEXP s11SEXP, SEXP nocens11SEXP, SEXP m11SEXP, SEXP cv11SEXP, SEXP epsilonSEXP) {
+RcppExport SEXP _SamplingStrataC_crea_aRcpp(SEXP N11SEXP, SEXP s11SEXP, SEXP nocens11SEXP, SEXP m11SEXP, SEXP cv11SEXP, SEXP epsilonSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -339,7 +339,7 @@ END_RCPP
 }
 // a13
 arma::mat a13(arma::mat x);
-RcppExport SEXP _SamplingStrata_a13(SEXP xSEXP) {
+RcppExport SEXP _SamplingStrataC_a13(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -350,7 +350,7 @@ END_RCPP
 }
 // chromyNew1
 NumericVector chromyNew1(double& alfatot, double& diff, int& iter, arma::vec alfa, arma::vec alfanext, arma::vec x, const arma::mat a, const arma::vec cost, const double& epsilon, const int& maxiter, const bool& realAllocation);
-RcppExport SEXP _SamplingStrata_chromyNew1(SEXP alfatotSEXP, SEXP diffSEXP, SEXP iterSEXP, SEXP alfaSEXP, SEXP alfanextSEXP, SEXP xSEXP, SEXP aSEXP, SEXP costSEXP, SEXP epsilonSEXP, SEXP maxiterSEXP, SEXP realAllocationSEXP) {
+RcppExport SEXP _SamplingStrataC_chromyNew1(SEXP alfatotSEXP, SEXP diffSEXP, SEXP iterSEXP, SEXP alfaSEXP, SEXP alfanextSEXP, SEXP xSEXP, SEXP aSEXP, SEXP costSEXP, SEXP epsilonSEXP, SEXP maxiterSEXP, SEXP realAllocationSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -371,7 +371,7 @@ END_RCPP
 }
 // bethelRcppOpen
 arma::vec bethelRcppOpen(DataFrame& stratif, DataFrame& errors, int minnumstrat, int maxiter, int maxiter1, LogicalVector printa, LogicalVector realAllocation, double epsilon);
-RcppExport SEXP _SamplingStrata_bethelRcppOpen(SEXP stratifSEXP, SEXP errorsSEXP, SEXP minnumstratSEXP, SEXP maxiterSEXP, SEXP maxiter1SEXP, SEXP printaSEXP, SEXP realAllocationSEXP, SEXP epsilonSEXP) {
+RcppExport SEXP _SamplingStrataC_bethelRcppOpen(SEXP stratifSEXP, SEXP errorsSEXP, SEXP minnumstratSEXP, SEXP maxiterSEXP, SEXP maxiter1SEXP, SEXP printaSEXP, SEXP realAllocationSEXP, SEXP epsilonSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -389,7 +389,7 @@ END_RCPP
 }
 // stdev_Rcpp
 double stdev_Rcpp(DataFrame dataset, int i, double fitting, double range, int kappa);
-RcppExport SEXP _SamplingStrata_stdev_Rcpp(SEXP datasetSEXP, SEXP iSEXP, SEXP fittingSEXP, SEXP rangeSEXP, SEXP kappaSEXP) {
+RcppExport SEXP _SamplingStrataC_stdev_Rcpp(SEXP datasetSEXP, SEXP iSEXP, SEXP fittingSEXP, SEXP rangeSEXP, SEXP kappaSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -404,41 +404,41 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_SamplingStrata_Rcpp_sortDelta", (DL_FUNC) &_SamplingStrata_Rcpp_sortDelta, 1},
-    {"_SamplingStrata_aggrStrata_RcppOpen", (DL_FUNC) &_SamplingStrata_aggrStrata_RcppOpen, 5},
-    {"_SamplingStrata_uppercasevec", (DL_FUNC) &_SamplingStrata_uppercasevec, 1},
-    {"_SamplingStrata_grepRcpp", (DL_FUNC) &_SamplingStrata_grepRcpp, 2},
-    {"_SamplingStrata_seqRcpp", (DL_FUNC) &_SamplingStrata_seqRcpp, 1},
-    {"_SamplingStrata_int_to_string", (DL_FUNC) &_SamplingStrata_int_to_string, 1},
-    {"_SamplingStrata_paste3", (DL_FUNC) &_SamplingStrata_paste3, 2},
-    {"_SamplingStrata_repRcpp", (DL_FUNC) &_SamplingStrata_repRcpp, 2},
-    {"_SamplingStrata_repRcpp2", (DL_FUNC) &_SamplingStrata_repRcpp2, 2},
-    {"_SamplingStrata_repRcppdouble", (DL_FUNC) &_SamplingStrata_repRcppdouble, 2},
-    {"_SamplingStrata_testDFtoNM1", (DL_FUNC) &_SamplingStrata_testDFtoNM1, 1},
-    {"_SamplingStrata_ordina_variabiliRcpp", (DL_FUNC) &_SamplingStrata_ordina_variabiliRcpp, 3},
-    {"_SamplingStrata_ndomRcpp", (DL_FUNC) &_SamplingStrata_ndomRcpp, 2},
-    {"_SamplingStrata_nvaluesRcpp", (DL_FUNC) &_SamplingStrata_nvaluesRcpp, 2},
-    {"_SamplingStrata_crea_disjRcpp", (DL_FUNC) &_SamplingStrata_crea_disjRcpp, 2},
-    {"_SamplingStrata_dfrow", (DL_FUNC) &_SamplingStrata_dfrow, 2},
-    {"_SamplingStrata_int_to_charvec", (DL_FUNC) &_SamplingStrata_int_to_charvec, 1},
-    {"_SamplingStrata_paste4", (DL_FUNC) &_SamplingStrata_paste4, 2},
-    {"_SamplingStrata_testDFtoNM3", (DL_FUNC) &_SamplingStrata_testDFtoNM3, 1},
-    {"_SamplingStrata_ordina_variabiliRcpp2", (DL_FUNC) &_SamplingStrata_ordina_variabiliRcpp2, 3},
-    {"_SamplingStrata_cbindRcpp", (DL_FUNC) &_SamplingStrata_cbindRcpp, 2},
-    {"_SamplingStrata_cbindRcpp1", (DL_FUNC) &_SamplingStrata_cbindRcpp1, 2},
-    {"_SamplingStrata_vecconcat", (DL_FUNC) &_SamplingStrata_vecconcat, 2},
-    {"_SamplingStrata_stringrepRcpp", (DL_FUNC) &_SamplingStrata_stringrepRcpp, 2},
-    {"_SamplingStrata_concat", (DL_FUNC) &_SamplingStrata_concat, 2},
-    {"_SamplingStrata_stringrepRcpp2", (DL_FUNC) &_SamplingStrata_stringrepRcpp2, 2},
-    {"_SamplingStrata_crea_aRcpp", (DL_FUNC) &_SamplingStrata_crea_aRcpp, 6},
-    {"_SamplingStrata_a13", (DL_FUNC) &_SamplingStrata_a13, 1},
-    {"_SamplingStrata_chromyNew1", (DL_FUNC) &_SamplingStrata_chromyNew1, 11},
-    {"_SamplingStrata_bethelRcppOpen", (DL_FUNC) &_SamplingStrata_bethelRcppOpen, 8},
-    {"_SamplingStrata_stdev_Rcpp", (DL_FUNC) &_SamplingStrata_stdev_Rcpp, 5},
+    {"_SamplingStrataC_Rcpp_sortDelta", (DL_FUNC) &_SamplingStrataC_Rcpp_sortDelta, 1},
+    {"_SamplingStrataC_aggrStrata_RcppOpen", (DL_FUNC) &_SamplingStrataC_aggrStrata_RcppOpen, 5},
+    {"_SamplingStrataC_uppercasevec", (DL_FUNC) &_SamplingStrataC_uppercasevec, 1},
+    {"_SamplingStrataC_grepRcpp", (DL_FUNC) &_SamplingStrataC_grepRcpp, 2},
+    {"_SamplingStrataC_seqRcpp", (DL_FUNC) &_SamplingStrataC_seqRcpp, 1},
+    {"_SamplingStrataC_int_to_string", (DL_FUNC) &_SamplingStrataC_int_to_string, 1},
+    {"_SamplingStrataC_paste3", (DL_FUNC) &_SamplingStrataC_paste3, 2},
+    {"_SamplingStrataC_repRcpp", (DL_FUNC) &_SamplingStrataC_repRcpp, 2},
+    {"_SamplingStrataC_repRcpp2", (DL_FUNC) &_SamplingStrataC_repRcpp2, 2},
+    {"_SamplingStrataC_repRcppdouble", (DL_FUNC) &_SamplingStrataC_repRcppdouble, 2},
+    {"_SamplingStrataC_testDFtoNM1", (DL_FUNC) &_SamplingStrataC_testDFtoNM1, 1},
+    {"_SamplingStrataC_ordina_variabiliRcpp", (DL_FUNC) &_SamplingStrataC_ordina_variabiliRcpp, 3},
+    {"_SamplingStrataC_ndomRcpp", (DL_FUNC) &_SamplingStrataC_ndomRcpp, 2},
+    {"_SamplingStrataC_nvaluesRcpp", (DL_FUNC) &_SamplingStrataC_nvaluesRcpp, 2},
+    {"_SamplingStrataC_crea_disjRcpp", (DL_FUNC) &_SamplingStrataC_crea_disjRcpp, 2},
+    {"_SamplingStrataC_dfrow", (DL_FUNC) &_SamplingStrataC_dfrow, 2},
+    {"_SamplingStrataC_int_to_charvec", (DL_FUNC) &_SamplingStrataC_int_to_charvec, 1},
+    {"_SamplingStrataC_paste4", (DL_FUNC) &_SamplingStrataC_paste4, 2},
+    {"_SamplingStrataC_testDFtoNM3", (DL_FUNC) &_SamplingStrataC_testDFtoNM3, 1},
+    {"_SamplingStrataC_ordina_variabiliRcpp2", (DL_FUNC) &_SamplingStrataC_ordina_variabiliRcpp2, 3},
+    {"_SamplingStrataC_cbindRcpp", (DL_FUNC) &_SamplingStrataC_cbindRcpp, 2},
+    {"_SamplingStrataC_cbindRcpp1", (DL_FUNC) &_SamplingStrataC_cbindRcpp1, 2},
+    {"_SamplingStrataC_vecconcat", (DL_FUNC) &_SamplingStrataC_vecconcat, 2},
+    {"_SamplingStrataC_stringrepRcpp", (DL_FUNC) &_SamplingStrataC_stringrepRcpp, 2},
+    {"_SamplingStrataC_concat", (DL_FUNC) &_SamplingStrataC_concat, 2},
+    {"_SamplingStrataC_stringrepRcpp2", (DL_FUNC) &_SamplingStrataC_stringrepRcpp2, 2},
+    {"_SamplingStrataC_crea_aRcpp", (DL_FUNC) &_SamplingStrataC_crea_aRcpp, 6},
+    {"_SamplingStrataC_a13", (DL_FUNC) &_SamplingStrataC_a13, 1},
+    {"_SamplingStrataC_chromyNew1", (DL_FUNC) &_SamplingStrataC_chromyNew1, 11},
+    {"_SamplingStrataC_bethelRcppOpen", (DL_FUNC) &_SamplingStrataC_bethelRcppOpen, 8},
+    {"_SamplingStrataC_stdev_Rcpp", (DL_FUNC) &_SamplingStrataC_stdev_Rcpp, 5},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_SamplingStrata(DllInfo *dll) {
+RcppExport void R_init_SamplingStrataC(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

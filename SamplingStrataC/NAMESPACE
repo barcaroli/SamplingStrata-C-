@@ -13,7 +13,7 @@ importFrom("grDevices", "rainbow")
 importFrom("graphics", "legend")
 importFrom("stats", "dnorm","cov","var")
 importFrom("formattable", "formattable", "color_bar")
-useDynLib(SamplingStrata, .registration=TRUE)
+useDynLib(SamplingStrataC, .registration=TRUE)
 importFrom(Rcpp, evalCpp)
 exportPattern("^[[:alpha:]]+")
 

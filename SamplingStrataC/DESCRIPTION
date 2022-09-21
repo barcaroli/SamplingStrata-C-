@@ -1,4 +1,4 @@
-Package: SamplingStrata
+Package: SamplingStrataC
 Type: Package
 Title: Optimal Stratification of Sampling Frames for Multipurpose Sampling Surveys
 Version: 1.5-4
@@ -11,6 +11,8 @@ Authors@R: c(person("Giulio", "Barcaroli", role = c("aut", "cre"),
                      email = "marco.ballin@istat.it"),
               person("Hanjo", "Odendaal", role = "aut",
                      email = "hanjo.oden@gmail.com"),
+              person("Mervyn", "O'Luing", role = "aut",
+                     email = "Mervyn.OLuing@cso.ie"),
               person("Daniela", "Pagliuca", role = "aut"), 
               person("Egon", "Willighagen", role = "aut"),
               person("Diego", "Zardetto", role = "aut")

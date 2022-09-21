@@ -510,9 +510,14 @@ NumericVector chromyNew1(double& alfatot, double& diff, int& iter,
 
 
 // [[Rcpp::export]]
-arma::vec bethelRcppOpen(DataFrame &stratif, DataFrame &errors,int minnumstrat = 2, 
-                   int  maxiter = 200, int maxiter1 = 25, 
-                   LogicalVector printa=true,LogicalVector realAllocation=true, double epsilon = 1e-11){
+arma::vec bethelRcppOpen(DataFrame &stratif, 
+                         DataFrame &errors,
+                         int minnumstrat = 2, 
+                   int  maxiter = 200, 
+                   int maxiter1 = 25, 
+                   LogicalVector printa=true,
+                   LogicalVector realAllocation=true, 
+                   double epsilon = 1e-11){
   
   CharacterVector strat = uppercasevec(stratif);
   stratif.attr("names")= strat;
@@ -538,6 +543,8 @@ arma::vec bethelRcppOpen(DataFrame &stratif, DataFrame &errors,int minnumstrat =
     stop("Error: Number of variables don't match the number of planned CV");
   arma::rowvec N =  Rcpp::as<arma::rowvec>(stratif["N"]);
   arma::rowvec cens =  Rcpp::as<arma::rowvec>(stratif["CENS"]);
+  
+
   for(int i = 0;i <  N.size(); ++i){
     if (N[i] < minnumstrat) cens[i] = 1;
   }
@@ -636,12 +643,13 @@ arma::vec bethelRcppOpen(DataFrame &stratif, DataFrame &errors,int minnumstrat =
   //  const int& maxiter=200,const bool& realAllocation=false)
   arma::vec n = chromyNew1(alfatot1,diff1,iter, alfa1, alfanext1,x1,a1,cost,epsilon,
                      maxiter,realAllocation);
+  
   int   contx = sum(n > Nvec);
   
   for(int i = 0;i <  N.size(); ++i){
+    cens[i] = 0;
     if (n[i] > Nvec[i]) cens[i] = 1;
   }
-  
   nocens = 1 - cens;
   
   
@@ -653,41 +661,61 @@ arma::vec bethelRcppOpen(DataFrame &stratif, DataFrame &errors,int minnumstrat =
   for(int i = 0;i <  N.size(); ++i){
     if (n[i] < minnumstrat) {n[i]=outvec[i];};
   }
+  //cout << "outvec: " << outvec << "\n  ";
   
   while (contx > 0 && iter1 < maxiter1) {
     iter1 = iter1 + 1;
     //a <- crea_a()
     a1 = crea_aRcpp(Nvec, s, nocensvec, m,  cvvec, epsilon);
     //n <- chromy(0, 999, 0, c(rep(1/nvar, nvar)), c(rep(0, nvar)), array(0.1, dim = c(nstrat, 1)))
-    n = chromyNew1(alfatot1,diff1,iter, alfa1, alfanext1,x1,a1,cost,epsilon,
+    arma::vec n = chromyNew1(alfatot1,diff1,iter, alfa1, alfanext1,x1,a1,cost,epsilon,
                    maxiter,realAllocation);;
+
+ 
+    
     //contx <- sum(n > N)
     contx = sum(n > Nvec);
     //cens[n > N] <- 1
+    //cout << "Nvec: " << Nvec << "\n";
     for(int i = 0;i <  N.size(); ++i){
+      cens[i] = 0;
       if (n[i] > Nvec[i]) cens[i] = 1;
+      //cout << "\n n: " << n[i] << "  Nvec: " << Nvec[i] << "  cens: " << cens[i];
     }
     
     nocens = 1 - cens;
     // n <- check_n()
     for(int i = 0;i <  N.size(); ++i){
-      if(minnumstrat < N[i]){outvec[i]= minnumstrat;}else{outvec[i]=N[i];};
+      if(minnumstrat < Nvec[i]){outvec[i]= minnumstrat;}else{outvec[i]=Nvec[i];};
     }
     
     for(int i = 0;i <  N.size(); ++i){
       if (n[i] < minnumstrat) {n[i]=outvec[i];};
     }
   }
+  
+  
   //n = (nocens * n) + (cens * Nvec);
+  
+  for(int i = 0;i <  N.size(); ++i){
+    cens[i] = 0;
+    if (n[i] > Nvec[i]) cens[i] = 1;
+  }
+  
+  nocens = 1 - cens;
+  
+  arma::vec outvec1(N.size());
   arma::vec outvec2(N.size());
   for(int i = 0;i <  N.size(); ++i){
-    outvec[i]=(nocens[i] * n[i]);
+    if(minnumstrat < Nvec[i]){outvec[i]= minnumstrat;}else{outvec[i]=Nvec[i];};
+    outvec1[i]=(nocens[i] * n[i]);
   }
+  //cout << "outvec1: " << outvec1 << "\n  ";
   for(int i = 0;i <  N.size(); ++i){
     outvec2[i]=(cens[i] * Nvec[i]);
   }
-  
-  n = outvec + outvec2;
+  //cout << "outvec2: " << outvec2 << "\n  ";
+  n = outvec1 + outvec2;
   return n;
   
   
