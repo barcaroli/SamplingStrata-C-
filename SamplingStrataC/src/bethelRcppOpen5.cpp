@@ -515,7 +515,7 @@ NumericVector chromyNew1(double& alfatot, double& diff, int& iter,
 }
 
 
-// [[Rcpp::export]]
+// [[Rcpp::export]] 
 arma::vec bethelRcppOpen(DataFrame &stratif, 
                          DataFrame &errors,
                          int minnumstrat = 2, 
