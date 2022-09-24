@@ -197,7 +197,7 @@ save.image(file="run.Rdata")
 #--------------------------------------
 detach("package:SamplingStrata", unload = TRUE)
 # Better to restart R
-install.packages("D://Google Drive//Sampling//SamplingStrata-C-//SamplingStrataC_1.5-4.tar.gz", repos = NULL, type = "source")
+# install.packages("D://Google Drive//Sampling//SamplingStrata-C-//SamplingStrataC_1.5-4.tar.gz", repos = NULL, type = "source")
 
 library(SamplingStrataC)
 
@@ -227,13 +227,13 @@ sum(outstrata$SOLUZ)
 # [1]  520.1812
 expected_CV(outstrata)
 #         cv(Y1)    cv(Y2)
-# DOM1 0.0998679 0.1000005
-# DOM2 0.0998066 0.0999211
-# DOM3 0.1040667 0.1000055
-# DOM4 0.1009304 0.0981198
-# DOM5 0.0988786 0.0998333
-# DOM6 0.0998954 0.0993871
-# DOM7 0.0998692 0.0999358
+# DOM1 0.0985074 0.1000000
+# DOM2 0.1000000 0.1000000
+# DOM3 0.1000000 0.1000000
+# DOM4 0.0917426 0.0990130
+# DOM5 0.0999852 0.0999813
+# DOM6 0.0990527 0.0994976
+# DOM7 0.1000000 0.1000000
 
 #----------------------------------------
 # Performance atomic method parallel 
@@ -248,23 +248,22 @@ system.time(
                            pops = 10,
                            parallel=T)
 )
-# *** Starting parallel optimization for  7  domains using  5  cores
-# |++++++++++++++++++++++++++++++++++++++++++++++++++| 100% elapsed=13s  
-# 
-# *** Sample size :  0
-# *** Number of strata :  42
-# ---------------------------   
 #   utente   sistema trascorso 
-#  0.49      0.08      4.71   
+#  0.44      0.05      3.52    
 
 outstrata <- solution6$aggr_strata
 colnames(outstrata)[10] <- "SOLUZ"
 sum(outstrata$SOLUZ)
-# [1] 491.6175
+# [1] 476.3474
 expected_CV(outstrata)
 #         cv(Y1)    cv(Y2)
-# DOM1 0.2422364 0.2703787
-# DOM2 0.0980734 0.0997199
+# DOM1 0.1000000 0.1000000
+# DOM2 0.0993866 0.0999889
+# DOM3 0.1004838 0.0987443
+# DOM4 0.0686157 0.0967519
+# DOM5 0.1000000 0.1000000
+# DOM6 0.0994908 0.0991029
+# DOM7 0.0999291 0.0989241
 
 #----------------------------------------
 # Performance continuous method no parallel 

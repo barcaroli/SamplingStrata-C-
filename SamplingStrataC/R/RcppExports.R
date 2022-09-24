@@ -117,7 +117,7 @@ chromyNew1 <- function(alfatot, diff, iter, alfa, alfanext, x, a, cost, epsilon 
     .Call(`_SamplingStrataC_chromyNew1`, alfatot, diff, iter, alfa, alfanext, x, a, cost, epsilon, maxiter, realAllocation)
 }
 
-bethelRcppOpen <- function(stratif, errors, minnumstrat = 2L, maxiter = 200L, maxiter1 = 25L, printa = TRUE, realAllocation = TRUE, epsilon = 1e-11) {
+bethelRcppOpen <- function(stratif, errors, minnumstrat = 2L, maxiter = 200L, maxiter1 = 5L, printa = TRUE, realAllocation = TRUE, epsilon = 1e-11) {
     .Call(`_SamplingStrataC_bethelRcppOpen`, stratif, errors, minnumstrat, maxiter, maxiter1, printa, realAllocation, epsilon)
 }
 
